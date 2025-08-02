@@ -1,7 +1,6 @@
 # BonziCep 📍
 
-Gem Ruby para gerar, validar e consultar códigos de endereçamento postal brasileiro (postal code/zip code), incluindo
-metadados região, estado e descrição.  
+Gem Ruby para gerar, validar e consultar Códigos de Endereçamento Postal brasileiros (CEP - zip code) com informações de estado e região.
 
 ---
 
