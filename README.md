@@ -89,7 +89,7 @@ Via terminal (CLI)
 # Gerar CEP aleatório
 bonzi_cep -g
 
-# Gerar para São Paulo
+# Gerar para estado específico (SP)
 bonzi_cep -g -e SP
 
 # Consultar um CEP
