@@ -102,5 +102,5 @@ bonzi_cep -v 12345-678
 bonzi_cep -l
 ```
 
-## Licença
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+## Licença📜
+Este projeto está licenciado sob a licença MIT - veja o arquivo [MIT License](https://opensource.org/licenses/MIT). para detalhes.
