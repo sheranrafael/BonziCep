@@ -1,39 +1,109 @@
-# BonziCep
+# BonziCep 📍
 
-TODO: Delete this and the text below, and describe your gem
+Gem Ruby para gerar, validar e consultar Códigos de Endereçamento Postal brasileiros (CEP - zip code) com informações de estado e região.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bonzi_cep`. To experiment with that code, run `bin/console` for an interactive prompt.
+---
 
-## Installation
+## Características 
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+- ✅Zero dependências - Funciona com Ruby puro
 
-Install the gem and add to the application's Gemfile by executing:
+- ✅Suporte a Ruby 3.1+ - Compatível com versões modernas
 
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+- ✅Interface simples - Fácil de usar tanto em código quanto via CLI
+
+- ✅Dados embutidos - Não requer banco de dados ou API externa
+
+---
+
+## Funcionalidades
+
+### Geração de CEPs
+
+- Aleatórios ou por estado específico
+
+- Com ou sem formatação (12345-678 ou 12345678)
+
+- Inclui metadados automáticos (estado e região)
+
+### Validação
+
+- Verifica formato válido de CEP
+
+- Checa se pertence a um estado específico
+
+### Consulta
+
+- Identifica estado e região de um CEP
+
+- Suporte a todos os estados brasileiros
+
+---
+
+## Instalação:
+Adicione ao seu Gemfile:
+
+```ruby
+gem 'bonzi_cep'
 ```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
-
+e execute
 ```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+$ bundle install
 ```
 
-## Usage
+ou instale diretamente
+```bash
+$ gem install bonzi_cep
+```
 
-TODO: Write usage instructions here
+## Uso
+```ruby
+require 'bonzi_cep'
 
-## Development
+# Gerar CEP aleatório
+BonziCEP.gerar
+#=> { cep: "12345-678", estado: "SP", regiao: "Sudeste" }
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+# Gerar para um estado específico
+BonziCEP.gerar_para_estado('RJ')
+#=> { cep: "20000-000", estado: "RJ", regiao: "Sudeste" }
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# Validar CEP
+BonziCEP.valido?("12345-678") #=> true
 
-## Contributing
+# Consultar CEP
+BonziCEP.consultar("01001-000")
+#=> { cep: "01001-000", estado: "SP", regiao: "Sudeste" }
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bonzi_cep.
+# Verificar estado
+BonziCEP.pertence_a_estado?("20000-000", "RJ") #=> true
 
-## License
+# Listar estados suportados
+BonziCEP.estados_suportados
+#=> ["AC", "AL", "AM", ...]
+```
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Via terminal (CLI)
+```ruby
+# Gerar CEP aleatório
+bonzi_cep -g
+
+# Gerar para São Paulo
+bonzi_cep -g -e SP
+
+# Consultar um CEP
+bonzi_cep -c 01001-000
+
+# Validar um CEP
+bonzi_cep -v 12345-678
+
+# Listar estados suportados
+bonzi_cep -l
+```
+
+---
+
+
+## Licença📜
+Este projeto está licenciado sob a licença MIT - veja o arquivo [MIT License](https://opensource.org/licenses/MIT). para detalhes.
