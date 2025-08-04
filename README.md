@@ -107,3 +107,6 @@ bonzi_cep -l
 
 ## Licença📜
 Este projeto está licenciado sob a licença MIT - veja o arquivo [MIT License](https://opensource.org/licenses/MIT). para detalhes.
+
+[![Downloads](https://img.shields.io/gem/dt/bonzi_cep.svg)](https://rubygems.org/gems/bonzi_cep)
+
