@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sheran"]
   spec.email         = ["bonzibudddy@proton.me"]
 
-  spec.summary       = "Gem para gerar, validar e consultar CEPs brasileiros"
-  spec.description   = "Gem Ruby para trabalhar com Códigos de Endereçamento Postal brasileiros (CEP)"
-  spec.homepage      = "https://github.com/sheranrafael/bonzi_cep"
+  spec.summary       = "Ruby gem to generate, validate, and query Brazilian postal codes"
+  spec.description   = "Ruby gem to generate, validate, and query Brazilian postal codes (CEP/zip code), including region, state, and description metadata."
+  spec.homepage      = "https://github.com/sheranrafael/BonziCep"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
